@@ -1,0 +1,28 @@
+FORMAL PHARMACEUTICAL QUALITY COMPLAINT REPORT
+
+Date: 2024-03-20
+To: Quality Assurance & Regulatory Compliance Department
+From: Dr. Robert Harrison, Chief Pharmacist, Metro Health General Hospital
+Contact Email: r.harrison@metrohealth.org
+Location: Metro Health Hospital, Chicago, IL, USA
+
+PRODUCT COMPLAINT DETAILS:
+Product Name: Paracetamol 500mg Film-Coated Tablets
+Dosage Form: Finished Dosage Form (FDF) - Solid Oral
+Batch / Lot Number: PCT-2024-8841
+Manufacturing Date: 2024-01-15
+Expiry Date: 2026-01-14
+Manufacturing Facility: Site Alpha - Formulations Facility
+
+COMPLAINT DESCRIPTION & OBSERVATION:
+During routine morning dispensing in the Outpatient Pharmacy, senior staff observed physical defects across multiple blister strips of Batch PCT-2024-8841. Specifically:
+1. Approximately 40% of inspected tablets exhibited horizontal split / capping (the crown of the tablet separated from the body inside the blister cavity).
+2. Loose powder debris was present within intact blister pockets.
+3. Patients reported difficulty swallowing broken fragments.
+
+RETAIN SAMPLES & STORAGE:
+- Physical samples are retained and available for QC return shipment.
+- Stored at controlled room temperature (20-25°C) in accordance with label instructions.
+
+REQUESTED ACTION:
+Immediate investigation into tableting compression parameters, lot quarantine guidance, and replacement stock dispatch.

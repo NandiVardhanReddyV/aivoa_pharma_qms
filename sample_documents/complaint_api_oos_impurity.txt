@@ -1,0 +1,29 @@
+QUALITY CONTROL OUT-OF-SPECIFICATION (OOS) COMPLAINT NOTICE
+
+Date: 2024-03-22
+To: Global Quality Operations, Active Pharmaceutical Ingredients Division
+From: Elena Rostova, Quality Control Director, Apex Formulations GmbH
+Email: e.rostova@apexformulations.de
+Location: Frankfurt, Germany
+
+RAW MATERIAL RECEIPT & COMPLAINT DETAILS:
+Product Name: Metformin Hydrochloride API (Micro-grained Powder)
+Material Category: Active Pharmaceutical Ingredient (API)
+Vendor Batch / Lot Number: MET-API-9902
+Quantity Received: 500 kg (10 x 50kg Fiber Drums)
+Date of Receipt: 2024-03-18
+Manufacturing Site: API Chemical Synthesis Plant 3
+
+ANALYTICAL TESTING FINDINGS & DEFECT SPECIFICATION:
+During incoming raw material qualification testing via High-Performance Liquid Chromatography (HPLC) according to USP/Ph. Eur. monograph criteria:
+- Related Substances Impurity Assay: An unassigned degradation impurity peak was detected at Relative Retention Time (RRT) 1.45.
+- Measured Concentration: 0.18% w/w.
+- Monograph Specification Limit: Not More Than (NMT) 0.10% w/w.
+- Status: OUT OF SPECIFICATION (OOS).
+
+RISK & SAFETY IMPLICATIONS:
+Unidentified impurity peak at 0.18% exceeds ICH Q3A qualification threshold (0.15%). Raw material cannot be released into drug product manufacturing without toxicological qualification and structural identification.
+
+REQUESTED URGENT ACTIONS:
+1. Issue 15-day regulatory field alert notification per EU GMP Chapter 8 / FDA 21 CFR Part 211.198.
+2. Provide vendor investigation report and LC-MS impurity profile comparison.
