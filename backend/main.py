@@ -39,8 +39,14 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-app.include_router(complaints_router, prefix=settings.API_V1_STR)
+# Standard API routes: /api/complaints, /api/analytics
+app.include_router(
+    complaints_router,
+    prefix=settings.API_V1_STR
+)
 
+# Backward-compatible routes without /api prefix
+app.include_router(complaints_router)
 @app.get("/")
 async def root():
     return {
