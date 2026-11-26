@@ -88,31 +88,45 @@ def _format_complaint_dict(c: DBComplaint) -> dict:
 
 @router.post("/complaints/ingest")
 async def ingest_complaint(
-    payload: Optional[IngestRequest] = None,
+    text_content: Optional[str] = Form(None),
     file: Optional[UploadFile] = File(None),
     model_name: str = Form("gemma2-9b-it"),
     db: AsyncSession = Depends(get_db)
 ):
     """Ingest raw prompt or uploaded PDF/Email file -> execute 7-stage LangGraph workflow -> save to DB."""
-    text_content = ""
     source_type = "Manual Prompt"
 
     if file:
         source_type = f"Uploaded File ({file.filename})"
         content_bytes = await file.read()
-        if file.filename.endswith(".pdf"):
+    
+        if file.filename.lower().endswith(".pdf"):
             try:
-                import io, pypdf
+                import io
+                import pypdf
+    
                 pdf_reader = pypdf.PdfReader(io.BytesIO(content_bytes))
-                extracted_pages = [page.extract_text() for page in pdf_reader.pages if page.extract_text()]
+    
+                extracted_pages = [
+                    page.extract_text()
+                    for page in pdf_reader.pages
+                    if page.extract_text()
+                ]
+    
                 text_content = "\n".join(extracted_pages)
-            except Exception:
-                text_content = content_bytes.decode("utf-8", errors="ignore")
+    
+            except Exception as e:
+                raise HTTPException(
+                    status_code=400,
+                    detail=f"Could not read PDF file: {str(e)}"
+                )
         else:
-            text_content = content_bytes.decode("utf-8", errors="ignore")
-    elif payload and payload.text_content:
-        text_content = payload.text_content
-        model_name = payload.model_name or model_name
+            text_content = content_bytes.decode(
+                "utf-8",
+                errors="ignore"
+            )
+    
+    text_content = text_content or ""
 
     if not text_content or not text_content.strip():
         raise HTTPException(status_code=400, detail="No text content or file provided for complaint ingestion.")
